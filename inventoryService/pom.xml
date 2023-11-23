@@ -11,7 +11,7 @@
 
 	<artifactId>inventoryService</artifactId>
 	<version>${parent.version}</version>
-	<name>inventoryService</name>
+	<name>inventoryservice</name>
 	<description>inventoryService</description>
 	<properties>
 		<java.version>17</java.version>

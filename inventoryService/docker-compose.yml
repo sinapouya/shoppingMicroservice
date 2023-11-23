@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+  inventoryservice:
+    build: .
+    container_name: inventoryservice
+    ports:
+      - '8083:8083'
+    depends_on:
+      - dbInventory
+    networks:
+      inventorynetwork:
+      discoverynetwork:
+
   dbInventory:
     image: mysql:5.7
     container_name: dbInventory
@@ -12,7 +23,13 @@ services:
       MYSQL_DATABASE: inventoryService
     volumes:
       - mydbInventory:/var/lib/mysql
+    networks:
+      inventorynetwork:
     ports:
       - '3307:3306'
 volumes:
   mydbInventory:
+networks:
+  discoverynetwork:
+    external: true
+  inventorynetwork:

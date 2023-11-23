@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  discoveryservice:
+    build: .
+    container_name: discoveryservice
+    ports:
+      - '8761:8761'
+    networks:
+      discoverynetwork:
+
+networks:
+  discoverynetwork:
+    external: true
