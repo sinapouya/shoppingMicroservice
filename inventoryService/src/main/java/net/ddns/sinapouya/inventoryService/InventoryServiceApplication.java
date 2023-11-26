@@ -22,14 +22,18 @@ public class InventoryServiceApplication {
 	public CommandLineRunner loadData(InventoryRepository inventoryRepository){
 		return args -> {
 			Inventory inventory1= Inventory.builder()
-					.skuCode("SKU 1")
+					.skuCode("SKU1")
 					.stock(100)
 					.build();
 			Inventory inventory2= Inventory.builder()
-					.skuCode("SKU 2")
+					.skuCode("SKU2")
 					.stock(0)
 					.build();
-			inventoryRepository.saveAll(List.of(inventory1,inventory2));
+			Inventory inventory3= Inventory.builder()
+					.skuCode("SKU3")
+					.stock(0)
+					.build();
+			inventoryRepository.saveAll(List.of(inventory1,inventory2,inventory3));
 		};
 	}
 }

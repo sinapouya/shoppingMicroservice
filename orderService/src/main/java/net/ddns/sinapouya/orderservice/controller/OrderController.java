@@ -22,7 +22,7 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<Response<OrderDto>> placeOrder(@RequestBody OrderDto orderDto){
-        OrderDto orderResponseDto = orderEntityService.PlaceService(orderDto);
+        OrderDto orderResponseDto = orderEntityService.placeService(orderDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(new Response<OrderDto>(orderResponseDto));
     }
 

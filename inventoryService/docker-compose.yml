@@ -33,3 +33,4 @@ networks:
   discoverynetwork:
     external: true
   inventorynetwork:
+    external: true
