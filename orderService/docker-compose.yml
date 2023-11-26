@@ -5,15 +5,16 @@ services:
     build: .
     container_name: orderservice
     ports:
-      - '8084:8080'
+      - '8084:8082'
     depends_on:
-      - dbOrder1
+      - databaseOrder
     networks:
       ordernetwork:
       discoverynetwork:
-  dbOrder1:
+      inventorynetwork:
+  databaseOrder:
     image: mysql:5.7
-    container_name: dbOrder1
+    container_name: databaseOrder
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
     environment:
@@ -21,14 +22,16 @@ services:
       MYSQL_ROOT_PASSWORD: mypassword
       MYSQL_DATABASE: orderService
     volumes:
-      - mydbOrder1:/var/lib/mysql
+      - volumeOrder:/var/lib/mysql
     networks:
       ordernetwork:
     ports:
       - '3309:3306'
 volumes:
-  mydbOrder1:
+  volumeOrder:
 networks:
   ordernetwork:
   discoverynetwork:
+    external: true
+  inventorynetwork:
     external: true

@@ -10,7 +10,7 @@
 	<groupId>net.ddns.sinapouya</groupId>
 	<artifactId>orderService</artifactId>
 	<version>${parent.version}</version>
-	<name>orderService</name>
+	<name>orderservice</name>
 	<description>orderEntity service</description>
 	<properties>
 		<java.version>17</java.version>
@@ -19,6 +19,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
