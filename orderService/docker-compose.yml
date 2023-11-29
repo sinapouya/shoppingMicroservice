@@ -4,8 +4,8 @@ services:
   orderservice:
     build: .
     container_name: orderservice
-    ports:
-      - '8084:8082'
+#    ports:
+#      - '8084:8082'
     depends_on:
       - databaseOrder
     networks:
@@ -25,8 +25,8 @@ services:
       - volumeOrder:/var/lib/mysql
     networks:
       ordernetwork:
-    ports:
-      - '3309:3306'
+#    ports:
+#      - '3309:3306'
 volumes:
   volumeOrder:
 networks:

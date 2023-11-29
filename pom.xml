@@ -19,6 +19,7 @@
 	</properties>
 	<packaging>pom</packaging>
 	<modules>
+		<module>apigateway</module>
 		<module>inventoryService</module>
 		<module>productService</module>
         <module>orderService</module>

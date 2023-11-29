@@ -4,8 +4,6 @@ services:
   discoveryservice:
     build: .
     container_name: discoveryservice
-    ports:
-      - '8761:8761'
     networks:
       discoverynetwork:
 
