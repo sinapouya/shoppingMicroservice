@@ -1,3 +1,122 @@
+🚀 Exciting News: Leveling Up Our Microservices Architecture - Part 7 api gateway ! 🚀
+
+Hello LinkedIn community! 👋 I'm back with another thrilling update in our microservices journey. In Part 6, we witnessed the Code Evolution within our OrderService microservice. Now, in Part 7, get ready for a game-changer as we introduce an API Gateway to streamline access to our microservices.
+
+📦 **Code Evolution Continues: API Gateway Integration:**
+Our microservices architecture has reached new heights with the integration of an API Gateway. Let's explore the enhancements made in the OrderService:
+
+**1. API Gateway Integration:**
+ - We've seamlessly integrated an API Gateway into our architecture, serving as a central entry point for external requests. This not only simplifies the access to our microservices but also enhances security and manageability.
+
+**2. Docker Compose Modification:**
+ - To align with the API Gateway implementation, our Docker Compose files have been updated. Services are now accessed exclusively through the API Gateway, offering a unified and organized access point for consumers.
+
+**3. Streamlined Microservices Access:**
+ - Whether you're interacting with the OrderService, InventoryService, or any other microservice, it's now done through the API Gateway. This streamlines communication and provides a cohesive interface for all consumers.
+
+⚙️ **Testing Assurance:**
+
+Ensuring the reliability of our microservices remains a top priority. Rest assured, our testing strategy has been reinforced to validate the seamless interaction facilitated by the API Gateway. The comprehensive Integration tests have been updated to reflect this architectural evolution.
+
+⚠️ **Note:** If you encounter the "intellij FATAL:gpu data manager mpl private.cc GPU process isn't usable. Goodbye" error, consider disabling the Markdown plugin in IntelliJ plugin settings. Alternatively, follow the instructions in this [Stack Overflow post](https://lnkd.in/eesp6ikK).
+
+📚 **GitHub Repository Update:**
+Curious to see the changes? Dive into the latest updates in our GitHub repository: [GitHub](https://lnkd.in/dhfr9G8X)
+
+⭐ **Your Feedback Matters:**
+As always, your feedback, insights, likes, or reposts contribute to our collective growth in the dynamic realm of microservices. Let's continue learning and growing together in the fascinating world of microservices! 🌍✨
+If you missed the previous parts, catch up here:
+Part 6: [https://lnkd.in/dx5SHg5J]
+Part 5: [https://lnkd.in/e_q7jZb8]
+Part 4: [https://lnkd.in/ecG3PQ_F]
+Part 3: [https://lnkd.in/efYCQ9Hb]
+Part 2: [https://lnkd.in/e3xr6pDa]
+Part 1: [https://lnkd.in/eDTYSqUt]
+
+hashtag#Microservices hashtag#Java hashtag#SpringBoot hashtag#APIGateway hashtag#Docker hashtag#DockerCompose hashtag#TechUpdate hashtag#DevOps hashtag#CodeEvolution hashtag#TechEnthusiast hashtag#GitHub
+
+🚀 Exciting News: Evolving Our Microservices Architecture - Part 6 Code Evolution ! 🚀
+
+Hello LinkedIn community! 👋 I'm thrilled to share the latest update in our ongoing microservices journey. In Part 5, we took a giant leap by Dockerizing our microservices architecture. Now, let's dive into the exciting changes and enhancements we've made in Part 6.
+
+🔍 Code Evolution: Microservices OrderService Update
+
+📦 **OrderEntityService Transformation:**
+I've revamped the `OrderEntityService` in the OrderService microservice to enhance functionality and integration. Here are the key changes:
+
+**1. Integration with InventoryService:**
+ - Introduced `InventoryService` integration to validate inventory availability before placing an order.
+
+**2. Improved Order Placement Logic:**
+ - Enhanced the order placement logic to validate inventory availability based on SKU codes.
+
+**3. Updated Exception Handling:**
+ - Implemented detailed exception handling for scenarios where SKUs are out of stock or invalid.
+
+⚙️ **Testing Reinforcement:**
+
+To ensure the reliability of our microservices, I've created comprehensive test cases using JUnit and Testcontainers. These tests cover scenarios such as valid orders, invalid SKUs, and zero quantity orders.
+
+⚠️ **Note:** If you encounter the "intellij FATAL:gpu data manager mpl private.cc GPU process isn't usable. Goodbye" error, consider disabling the Markdown plugin in IntelliJ plugin settings. Alternatively, follow the instructions in this [Stack Overflow post](https://lnkd.in/eesp6ikK).
+
+📚 **GitHub Repository Update:**
+Explore the code changes on my GitHub branch: [https://lnkd.in/eDjiQ4tx]
+
+⭐ **Your Feedback Matters:**
+Your feedback, insights, likes, or reposts contribute to our collective growth in the dynamic realm of microservices. Let's continue learning and growing together in the fascinating world of microservices! 🌍✨
+🚀 **Stay tuned for more updates as we continue to evolve and refine our microservices architecture!** 🚀
+If you missed the previous parts, catch up here:
+Part 5: [https://lnkd.in/e_q7jZb8]
+Part 4: [https://lnkd.in/ecG3PQ_F]
+Part 3: [https://lnkd.in/efYCQ9Hb]
+Part 2: [https://lnkd.in/e3xr6pDa]
+Part 1: [https://lnkd.in/eDTYSqUt]
+
+hashtag#Microservices hashtag#Java hashtag#SpringBoot hashtag#Testing hashtag#DevOps hashtag#CodeEvolution hashtag#TechUpdate
+hashtag#Docker hashtag#DockerCompose hashtag#DevOps hashtag#TechEnthusiast hashtag#GitHub
+
+🚀 Exciting News: Leveling Up Our Microservices Architecture! 5th part  Dockerizing Our Microservices 🚀 
+Hi LinkedIn community! 👋 I'm thrilled to share the latest update in our microservices journey – the Dockerization of our modules and the introduction of Dockerfiles for each module, along with a related service in the Docker Compose configuration! 🐳
+📁 Project Overview:
+In this phase, I've taken a significant step forward by containerizing microservices using Docker. This not only enhances the portability and consistency of our applications but also simplifies the deployment process. Let's dive into the key highlights of this Dockerization journey.
+
+If you missed the previous parts, catch up here:
+Part 4: [https://lnkd.in/ecG3PQ_F]
+Part 3: [https://lnkd.in/efYCQ9Hb]
+Part 2: [https://lnkd.in/e3xr6pDa]
+Part 1: [https://lnkd.in/eDTYSqUt]
+
+🐳 Dockerization:
+**Dockerfiles:** I've created Dockerfiles for each module in our microservices architecture. These Dockerfiles specify the necessary dependencies, configurations, and steps to build a Docker image for the respective module.
+
+**Docker Compose:** To orchestrate the deployment of our microservices, I've introduced a Docker Compose configuration file. This file defines the services, networks, and volumes required for microservices ecosystem.
+
+🚀 Building and Running:
+
+1. **Maven Clean and Install:**
+ Before containerizing  modules, I ensure a clean build by executing Maven clean and install commands. This guarantees that our applications are compiled and packaged correctly.
+ mvn clean install
+2. **Docker Compose Up:**
+ To start microservices and related services, run the following Docker Compose command. This command builds the Docker images and launches the containers in detached mode.
+sudo docker-compose up --build -d
+
+ 🌐 Visit [http://localhost:8761/](http://localhost:8761/) to explore the Eureka service registry and witness microservices in action!
+
+ ⚠️ **Note:** If you encounter the "intellij FATAL:gpu data manager mpl private.cc GPU process isn't usable. Goodbye " error, consider disabling the Markdown plugin in IntelliJ plugin settings. Alternatively, follow the instructions in this [Stack Overflow post](https://lnkd.in/eesp6ikK).
+
+
+📚 GitHub Repository:
+
+Explore the code changes on my GitHub branch: [https://lnkd.in/eZ7F2AZD]
+
+
+⭐ Your feedback, insights, likes, or reposts contribute to our collective growth in the dynamic realm of microservices.
+
+Let's continue learning and growing together in the fascinating world of microservices! 🌍✨
+
+hashtag#Java hashtag#Microservices hashtag#SpringBoot hashtag#Docker hashtag#DockerCompose hashtag#DevOps hashtag#TechEnthusiast hashtag#GitHub
+
+
 🚀 Exciting News: Leveling Up Our Microservices Architecture! 4th part  Add Discovery Server🚀 
 Hi LinkedIn community! 👋 I'm thrilled to share the latest update in our microservices journey – the introduction of the Discovery Server! 🌐
 📁 Project Overview:
