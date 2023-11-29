@@ -25,7 +25,7 @@ public class InventoryService {
 
         try{
             Response<List<InventoryDto>> response = webClient.get()
-                    .uri("http://inventoryservice:8083" + "/api/inventory",
+                    .uri("lb://apigatewayservice:8080" + "/api/inventory",
                             uriBuilder -> uriBuilder.queryParam("skuCodes", skuCodes).build())
                     .retrieve()
                     .bodyToMono(new ParameterizedTypeReference<Response<List<InventoryDto>>>() {

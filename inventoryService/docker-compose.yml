@@ -4,8 +4,8 @@ services:
   inventoryservice:
     build: .
     container_name: inventoryservice
-    ports:
-      - '8083:8083'
+#    ports:
+#      - '8083:8083'
     depends_on:
       - dbInventory
     networks:

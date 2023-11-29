@@ -1,10 +1,6 @@
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!productService/.mvn/wrapper/maven-wrapper.jar
-!discoveryServer/.mvn/wrapper/maven-wrapper.jar
-!inventoryService/.mvn/wrapper/maven-wrapper.jar
-!orderService/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -35,5 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-### mongo data ###
-productService/db_data
