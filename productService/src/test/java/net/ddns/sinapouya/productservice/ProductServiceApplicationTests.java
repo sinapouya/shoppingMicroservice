@@ -6,6 +6,7 @@ import net.ddns.sinapouya.productservice.entity.Product;
 import net.ddns.sinapouya.productservice.repository.ProductRepository;
 import net.ddns.sinapouya.productservice.util.ProductMapper;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -39,7 +40,7 @@ class ProductServiceApplicationTests {
 	@Autowired
 	private ObjectMapper objectMapper;
 	@Container
-	static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:6");
+	static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:4.0.10");
 	@Autowired
 	private ProductRepository productRepository;
 
@@ -47,10 +48,14 @@ class ProductServiceApplicationTests {
 	static void setProperties(DynamicPropertyRegistry dynamicPropertyRegistry){
 		dynamicPropertyRegistry.add("spring.data.mongodb.url",mongoDBContainer::getReplicaSetUrl);
 	}
-
+	@BeforeEach
+	void init(){
+		mongoDBContainer.start();
+	}
 	@AfterEach
 	void makeEmptyRepository(){
 		productRepository.deleteAll();
+		mongoDBContainer.stop();
 	}
 
 	@Test

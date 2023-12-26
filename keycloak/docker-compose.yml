@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: dbKeycloak
+    image: postgres:14.2
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: keycloak.json
+      POSTGRES_USER: keycloak.json
+      POSTGRES_PASSWORD: password
+    networks:
+      discoverynetwork:
+  keycloak:
+    container_name: keycloak
+    image: quay.io/keycloak/keycloak:22.0.3
+    command: -v start-dev --import-realm
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: keycloak.json
+      DB_USER: keycloak.json
+      DB_SCHEMA: public
+      DB_PASSWORD: password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      - ./config:/opt/keycloak/data/import
+    ports:
+      - 8090:8080
+    depends_on:
+      - postgres
+    networks:
+      discoverynetwork:
+volumes:
+  postgres_data:
+    driver: local
+networks:
+  discoverynetwork:
+    external: true

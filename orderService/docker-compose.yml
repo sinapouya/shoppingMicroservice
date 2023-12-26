@@ -5,13 +5,12 @@ services:
     build: .
     container_name: orderservice
 #    ports:
-#      - '8084:8082'
+#      - '5005:5005'
     depends_on:
       - databaseOrder
     networks:
       ordernetwork:
       discoverynetwork:
-      inventorynetwork:
   databaseOrder:
     image: mysql:5.7
     container_name: databaseOrder
@@ -33,5 +32,4 @@ networks:
   ordernetwork:
   discoverynetwork:
     external: true
-  inventorynetwork:
-    external: true
+
