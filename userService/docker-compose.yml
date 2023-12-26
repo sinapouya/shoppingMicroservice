@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  apigatewayservice:
+  userservice:
     build: .
-    container_name: apigatewayservice
-    ports:
-      - '8080:8080'
+    container_name: userservice
+#    ports:
+#      - '5005:5005'
     networks:
       discoverynetwork:
 networks:
