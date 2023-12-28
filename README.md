@@ -1,3 +1,32 @@
+🚀 Exciting News: Leveling Up Our Microservices Architecture - Part 8 adding Keycloak server🚀
+Hello LinkedIn community! 👋 I'm thrilled to share the latest update in our microservices journey. In Part 8, I've introduced a Keycloak server and a User Service to enhance security and authentication. I've secured our API Gateway and configured it to obtain tokens from Keycloak. Let's dive into the exciting details:
+🔐 **Enhanced Security with Keycloak Integration:**
+   - I've added a Keycloak server to our microservices ecosystem, providing a robust and centralized authentication solution. This ensures secure access to our services and sets the foundation for user authentication and authorization.
+👤 **User Service Integration:**
+   - This new addition  seamlessly integrates with Keycloak to empower our microservices with user-centric security.
+🌐 **API Gateway Security Reinforcement:**
+   - Our API Gateway is now fortified with enhanced security measures. It leverages Keycloak for token-based authentication, ensuring that only authorized users can access our microservices. This adds an extra layer of protection to our valuable resources.
+🛡️ **Internal Communication Optimization:**
+   - Recognizing the internal communication between the Order Service and Inventory Service, we've optimized the process. Now, when the Order Service communicates with the Inventory Service, it does so directly within the internal network, bypassing the API Gateway. This not only streamlines communication but also eliminates the need for unnecessary token validation in this specific interaction.
+⚙️ **Testing Assurance:**
+I create a test class and use testContainers for keycloak to test user microservice.
+📚 **GitHub Repository Update:**
+   - Excited to explore the latest changes? Head over to my GitHub repository for a detailed look: [GitHub](https://github.com/sinapouya/shoppingMicroservice/tree/userMicroservicePart8)
+⚠️ **Note:** If you encounter the "intellij FATAL:gpu data manager mpl private.cc GPU process isn't usable. Goodbye" error, consider disabling the Markdown plugin in IntelliJ plugin settings. Alternatively, follow the instructions in this [Stack Overflow post](https://lnkd.in/eesp6ikK).
+To build the API Gateway microservice, use the following Maven command:
+     mvn package -DskipTests
+This command compiles the project, packages it into a JAR file, and skips the tests during the build process.
+If you missed the previous parts, catch up here:
+- Part 7: [https://www.linkedin.com/posts/sina-pouya_microservices-java-springboot-activity-7135616769636847616-eqW2]
+- Part 6: [https://lnkd.in/dx5SHg5J]
+- Part 5: [https://lnkd.in/e_q7jZb8]
+- Part 4: [https://lnkd.in/ecG3PQ_F]
+- Part 3: [https://lnkd.in/efYCQ9Hb]
+- Part 2: [https://lnkd.in/e3xr6pDa]
+- Part 1: [https://lnkd.in/eDTYSqUt]
+#Microservices #Java #SpringBoot #APIGateway #Keycloak #UserAuthentication #Docker #DockerCompose  #DevOps #CodeEvolution #TechEnthusiast #GitHub
+
+
 🚀 Exciting News: Leveling Up Our Microservices Architecture - Part 7 api gateway ! 🚀
 
 Hello LinkedIn community! 👋 I'm back with another thrilling update in our microservices journey. In Part 6, we witnessed the Code Evolution within our OrderService microservice. Now, in Part 7, get ready for a game-changer as we introduce an API Gateway to streamline access to our microservices.
