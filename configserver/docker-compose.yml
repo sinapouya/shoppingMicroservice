@@ -1,14 +1,13 @@
 version: '3.8'
 
 services:
-  discoveryservice:
+  configserverservice:
     build: .
-    container_name: discoveryservice
+    container_name: configserverservice
     ports:
-    - 8761:8761
+      - '8091:8091'
     networks:
       discoverynetwork:
-
 networks:
   discoverynetwork:
     external: true

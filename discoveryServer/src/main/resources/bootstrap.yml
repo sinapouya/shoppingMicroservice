@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: discoveryservice
+  cloud:
+    config:
+      uri: http://configserverservice:8091/config
+      profile: dev
+    bootstrap:
+      enabled: true
+
