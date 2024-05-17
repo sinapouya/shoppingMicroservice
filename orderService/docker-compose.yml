@@ -12,7 +12,7 @@ services:
       ordernetwork:
       discoverynetwork:
   databaseOrder:
-    image: mysql:5.7
+    image: mysql:5.7.28
     container_name: databaseOrder
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped

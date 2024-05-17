@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: productService
+  cloud:
+    config:
+      uri: http://configserverservice:8091/config
+      profile: dev
+    bootstrap:
+      enabled: true

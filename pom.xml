@@ -25,6 +25,7 @@
         <module>orderService</module>
 		<module>discoveryServer</module>
 		<module>userService</module>
+		<module>configserver</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
